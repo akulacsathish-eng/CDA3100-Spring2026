@@ -104,6 +104,8 @@ gcc -Og -S filename.c
 To see object code disassembly:
 
 gcc -Og -c filename.c
+
+
 objdump -d filename.o
 
 To disassemble executable:
