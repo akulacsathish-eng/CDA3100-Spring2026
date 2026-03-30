@@ -14,23 +14,23 @@ TBD
 ## Repository Structure
 
 ```
-memory\_vault\_system/
+memory _vault _system/
 |-- README.md              # General overview (this file)
 |-- part1/                 # Source and build files for Part 1
 |   |-- Makefile
-|   |-- README\_part1.md
+|   |-- README _part1.md
 |   |-- main.c
-|   |-- vault\_gen.c
-|   |-- vault\_gen.h
-|   |-- seed\_util.c
-|   |-- seed\_util.h
-|   `-- (student implements recover\_password in main.c)
+|   |-- vault _gen.c
+|   |-- vault _gen.h
+|   |-- seed _util.c
+|   |-- seed _util.h
+|   `-- (student implements recover _password in main.c)
 ||-- instructor/            # Scripts for instructors
-|   |-- README\_instructor.md
-|   `-- generate\_answer.py # Generates expected answers for each student
+|   |-- README _instructor.md
+|   `-- generate _answer.py # Generates expected answers for each student
 `-- pdf/                   # Instructional handouts and timeline
 
-The **part1** directory contains a complete C project that can be compiled with GNU Make. Students are expected to fill in the `recover\_password` function in `main.c`. All other functionality, including vault construction and metadata generation, is provided.
+The **part1** directory contains a complete C project that can be compiled with GNU Make. Students are expected to fill in the `recover _password` function in `main.c`. All other functionality, including vault construction and metadata generation, is provided.
 
 
 
@@ -54,7 +54,7 @@ To build the C portion of the project, navigate to the `part1` directory and run
 make
 ```
 
-This will produce an executable named `vault`. Running the program requires a student identifier as input, either as a command-line argument or interactively when prompted. The program sets up the vault, generates metadata nodes based on the seed, and calls the yet-to-be-implemented `recover\_password` function. Once implemented by the student, this function should populate a character buffer with the recovered password.
+This will produce an executable named `vault`. Running the program requires a student identifier as input, either as a command-line argument or interactively when prompted. The program sets up the vault, generates metadata nodes based on the seed, and calls the yet-to-be-implemented `recover _password` function. Once implemented by the student, this function should populate a character buffer with the recovered password.
 
 
 
