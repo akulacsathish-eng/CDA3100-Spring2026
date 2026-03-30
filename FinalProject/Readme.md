@@ -1,7 +1,5 @@
-Memory Vault System
-This repository contains the complete implementation of the Memory Vault System, a four-week final project designed for a junior-level course in computer architecture. The project blends low-level C programming with assembly-language control logic to reinforce concepts such as struct layout, memory alignment, pointer arithmetic, and conditional branching. Students write portable C code for the first part of the assignment and Y86 assembly code for the second.
+**Memory Vault System**
 
-**Overview**
 
 The assignment is divided into two interconnected parts:
 Part 1 - Memory Vault (C + Memory Layout). Students analyse the layout of a custom metadata structure and apply pointer arithmetic to traverse a two-dimensional "vault" of characters. They must recover a hidden password by following metadata records and computing displacement offsets rather than using fixed field names.
@@ -25,18 +23,15 @@ memory_vault_system/
 |   |-- README_part2.md
 |   |-- y86_sim.py         # Y86 interpreter
 |   `-- program_template.y86
-|-- instructor/            # Scripts for instructors
-|   |-- README_instructor.md
-|   `-- generate_answer.py # Generates expected answers for each student
 `-- pdf/                   # Instructional handouts and timeline (generated)
     |-- Project_Timeline.pdf
     |-- Part1_Handout.pdf
     `-- Part2_Handout.pdf
 ```
-The part1 directory contains a complete C project that can be compiled with GNU Make. Students are expected to fill in the `recover_password` function in `main.c`. All other functionality, including vault construction and metadata generation, is provided. The part2 directory offers a Python-based interpreter for a small subset of the Y86 instruction set along with a starter assembly file. Students write assembly code in that file, making use of loops, conditional jumps, and memory operations to compute the unlocking code.
+**The part1 directory** contains a complete C project that can be compiled with GNU Make. Students are expected to fill in the `recover_password` function in `main.c`. All other functionality, including vault construction and metadata generation, is provided. 
+**
+The part2 directory ** offers a Python-based interpreter for a small subset of the Y86 instruction set along with a starter assembly file. Students write assembly code in that file, making use of loops, conditional jumps, and memory operations to compute the unlocking code.
 
-
-The instructor folder contains a script that allows teaching staff to compute personalised expected outputs for any student identifier. The script uses the same seed logic as the student programs and therefore reproduces the password and code generation exactly. It also supports optional flags for partial output and JSON formatting.
 
 Finally, the pdf directory (generated programmatically) holds handouts and a project timeline. These documents explain the assignment in prose, outline the learning objectives, and provide a weekly timeline for completion.
 Building and Running
