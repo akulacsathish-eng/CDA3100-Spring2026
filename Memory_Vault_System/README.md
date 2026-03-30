@@ -48,5 +48,5 @@ make
 
 This will produce an executable named `vault`.  Running the program requires a student identifier as input, either as a command‑line argument or interactively when prompted.  The program sets up the vault, generates metadata nodes based on the seed, and calls the yet‑to‑be‑implemented `recover_password` function.  Once implemented by the student, this function should populate a character buffer with the recovered password.
 
-.
+. Review your answer by running the script ./python generate_answer.py studentID
 
