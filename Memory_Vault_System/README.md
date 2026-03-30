@@ -32,7 +32,7 @@ memory_vault_system/
     └── Part2_Handout.pdf
 ```
 
-The **`part1`** directory contains a complete C project that can be compiled with GNU Make.  Students are expected to fill in the `recover_password` function in `main.c`.  All other functionality, including vault construction and metadata generation, is provided.  The **`part2`** directory offers a Python‑based interpreter for a small subset of the Y86 instruction set along with a starter assembly file.  Students write assembly code in that file, making use of loops, conditional jumps, and memory operations to compute the unlocking code.
+The **`part1`** directory contains a complete C project that can be compiled with GNU Make.  Students are expected to fill in the `recover_password` function in `main.c`.  All other functionality, including vault construction and metadata generation, is provided.  
 
  
 
