@@ -48,5 +48,5 @@ make
 
 This will produce an executable named `vault`.  Running the program requires a student identifier as input, either as a command‑line argument or interactively when prompted.  The program sets up the vault, generates metadata nodes based on the seed, and calls the yet‑to‑be‑implemented `recover_password` function.  Once implemented by the student, this function should populate a character buffer with the recovered password.
 
-To work on Part 2, students should read `part2/README_part2.md`, complete `program_template.y86`, and use the provided `y86_sim.py` to execute their assembly program.  The simulator prints a summary of the computed code, the target code, and whether the vault opens.
+.
 
