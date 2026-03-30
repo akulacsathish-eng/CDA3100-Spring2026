@@ -1,5 +1,5 @@
 #include "seed_util.h"
-
+#include <stddef.h>
 #include <ctype.h>
 
 /*
