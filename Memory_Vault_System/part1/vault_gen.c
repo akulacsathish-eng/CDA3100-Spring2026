@@ -7,8 +7,8 @@
 /*
  * Fill the vault with deterministic uppercase letters using a linear
  * congruential generator.  Each call to lcg_next() updates the state
- * in place and returns a new pseudo-random value.  The vault is
- * eight rows by twelve columns; values wrap into the range A-Z.
+ * in place and returns a new pseudo‑random value.  The vault is
+ * eight rows by twelve columns; values wrap into the range A–Z.
  */
 void generate_vault(char vault[ROWS][COLS], unsigned int *state) {
     for (int i = 0; i < ROWS; i++) {
@@ -31,7 +31,7 @@ Node *generate_nodes(int *out_len, unsigned int *state) {
         return NULL;
     }
     /* Choose a password length between 6 and 10 inclusive */
-    int len = 6 + (int)(lcg_next(state) % 5); /* yields 6-10 */
+    int len = 6 + (int)(lcg_next(state) % 5); /* yields 6–10 */
     Node *nodes = (Node *)malloc((size_t)len * sizeof(Node));
     if (nodes == NULL) {
         *out_len = 0;
@@ -49,7 +49,7 @@ Node *generate_nodes(int *out_len, unsigned int *state) {
         nodes[i].col_val = (unsigned char)(r_col % COLS);
         /* Set displacement to the offset of col_val within the struct */
         nodes[i].col_disp = (unsigned char)offsetof(Node, col_val);
-        /* Generate a 64-bit noise value by combining two 32-bit random numbers */
+        /* Generate a 64‑bit noise value by combining two 32‑bit random numbers */
         unsigned long long low = (unsigned long long)lcg_next(state);
         unsigned long long high = (unsigned long long)lcg_next(state);
         nodes[i].noise = (long)((high << 32) | low);

@@ -4,14 +4,14 @@
 #include <stddef.h>
 
 /*
- * Part 1 defines a metadata structure used to describe how to extract
- * characters from a two-dimensional vault.  Pay close attention to the
- * ordering and sizing of the fields--padding bytes will be inserted by
+ * Part 1 defines a metadata structure used to describe how to extract
+ * characters from a two–dimensional vault.  Pay close attention to the
+ * ordering and sizing of the fields—padding bytes will be inserted by
  * the compiler to satisfy alignment requirements.
  */
 typedef struct {
-    char valid;           /* non-zero when this node is considered */
-    char contributes;     /* non-zero when this node contributes a character */
+    char valid;           /* non‑zero when this node is considered */
+    char contributes;     /* non‑zero when this node contributes a character */
     unsigned char position; /* index into the output password */
     int row_index;        /* index of the row in the vault */
     unsigned char col_disp; /* byte offset of the column value within this struct */
@@ -25,7 +25,7 @@ typedef struct {
 
 /*
  * Fills the vault with deterministic uppercase letters based on the
- * provided pseudo-random state.  The state is updated via the linear
+ * provided pseudo‑random state.  The state is updated via the linear
  * congruential generator defined in seed_util.c.  The vault must be
  * allocated as a [ROWS][COLS] array by the caller.
  */

@@ -4,7 +4,7 @@
 
 /*
  * Extracts the numeric component of the student identifier and uses
- * it to compute a seed.  Non-digit characters are ignored.  The
+ * it to compute a seed.  Non‑digit characters are ignored.  The
  * multiplicative and additive constants are chosen to match a common
  * linear congruential generator; the modulus is 2^31 (0x80000000).
  */
@@ -19,7 +19,7 @@ unsigned int compute_seed(const char *student_id) {
         }
         student_id++;
     }
-    /* Perform the seed computation in 64-bit space to avoid overflow */
+    /* Perform the seed computation in 64‑bit space to avoid overflow */
     unsigned long long product = (unsigned long long)id_num * 1664525ULL;
     unsigned long long sum = product + 1013904223ULL;
     unsigned long long mod = sum & 0x7fffffffULL; /* modulo 2^31 */
@@ -27,7 +27,7 @@ unsigned int compute_seed(const char *student_id) {
 }
 
 /*
- * Update the pseudo-random state using the same LCG formula as in
+ * Update the pseudo‑random state using the same LCG formula as in
  * compute_seed.  Modulo 2^31 ensures the result fits into 31 bits.
  */
 unsigned int lcg_next(unsigned int *state) {

@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    /* Compute the deterministic seed and initialise the pseudo-random state */
+    /* Compute the deterministic seed and initialise the pseudo‑random state */
     unsigned int seed = compute_seed(student_id);
     unsigned int state = seed;
 

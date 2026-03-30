@@ -14,7 +14,7 @@
 unsigned int compute_seed(const char *student_id);
 
 /*
- * Produce the next pseudo-random value from the given state.  The state
+ * Produce the next pseudo‑random value from the given state.  The state
  * is updated in place according to the same linear congruential formula
  * used in compute_seed().  The return value is the new state value.
  */
