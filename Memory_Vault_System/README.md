@@ -33,7 +33,7 @@ memory_vault_system/
 ├── instructor/            # Scripts for instructors
 │   ├── README_instructor.md
 │   └── generate_answer.py # Generates expected answers for each student
-└── pdf/                   # Instructional handouts and timeline (generated)
+└── pdf/                   # Instructional handouts and timeline 
     ├── Project_Timeline.pdf
     ├── Part1_Handout.pdf
     └── Part2_Handout.pdf
