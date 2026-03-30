@@ -4,12 +4,7 @@
 #include <stdlib.h>
 #include <stddef.h>
 
-/*
- * Fill the vault with deterministic uppercase letters using a linear
- * congruential generator.  Each call to lcg_next() updates the state
- * in place and returns a new pseudo‑random value.  The vault is
- * eight rows by twelve columns; values wrap into the range A–Z.
- */
+
 void generate_vault(char vault[ROWS][COLS], unsigned int *state) {
     for (int i = 0; i < ROWS; i++) {
         for (int j = 0; j < COLS; j++) {
@@ -19,13 +14,7 @@ void generate_vault(char vault[ROWS][COLS], unsigned int *state) {
     }
 }
 
-/*
- * Generate an array of Node structures.  The length is chosen in the
- * range [6, 10] for variety.  Each node will reference a random
- * location within the vault.  The displacement field is set to the
- * offset of the col_val field within the Node structure so that
- * students must compute the column index via pointer arithmetic.
- */
+
 Node *generate_nodes(int *out_len, unsigned int *state) {
     if (out_len == NULL || state == NULL) {
         return NULL;
