@@ -1,8 +1,5 @@
 # Memory Vault System
 
-This repository contains the complete implementation of the **Memory Vault System**, a four‑week final project designed for a junior‑level course in computer architecture.  The project blends low‑level C programming with assembly‑language control logic to reinforce concepts such as struct layout, memory alignment, pointer arithmetic, and conditional branching.  Students write portable C code for the first part of the assignment and Y86 assembly code for the second.
-
-## Overview
 
 The assignment is divided into two interconnected parts:
 
