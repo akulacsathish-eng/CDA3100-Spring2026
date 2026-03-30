@@ -1,9 +1,12 @@
 Memory Vault System
 This repository contains the complete implementation of the Memory Vault System, a four-week final project designed for a junior-level course in computer architecture. The project blends low-level C programming with assembly-language control logic to reinforce concepts such as struct layout, memory alignment, pointer arithmetic, and conditional branching. Students write portable C code for the first part of the assignment and Y86 assembly code for the second.
-Overview
+
+**Overview**
+
 The assignment is divided into two interconnected parts:
 Part 1 - Memory Vault (C + Memory Layout). Students analyse the layout of a custom metadata structure and apply pointer arithmetic to traverse a two-dimensional "vault" of characters. They must recover a hidden password by following metadata records and computing displacement offsets rather than using fixed field names.
 Part 2 - Vault Control Program (Y86 Assembly). Students write a non-trivial program in Y86 assembly (a pedagogical subset of the x86-64 instruction set). The program iterates over an array of integers, computes a code based on even and odd index positions, compares it against a target value, and branches to an open or locked state.
+
 The system is deterministic. Personalisation is achieved via a seed computed from each student's numeric identifier. No per-student source files exist; all variation occurs at runtime through the seed.
 Repository Structure
 ```
@@ -32,14 +35,18 @@ memory_vault_system/
 ```
 The part1 directory contains a complete C project that can be compiled with GNU Make. Students are expected to fill in the `recover_password` function in `main.c`. All other functionality, including vault construction and metadata generation, is provided. The part2 directory offers a Python-based interpreter for a small subset of the Y86 instruction set along with a starter assembly file. Students write assembly code in that file, making use of loops, conditional jumps, and memory operations to compute the unlocking code.
 The instructor folder contains a script that allows teaching staff to compute personalised expected outputs for any student identifier. The script uses the same seed logic as the student programs and therefore reproduces the password and code generation exactly. It also supports optional flags for partial output and JSON formatting.
+
 Finally, the pdf directory (generated programmatically) holds handouts and a project timeline. These documents explain the assignment in prose, outline the learning objectives, and provide a weekly timeline for completion.
 Building and Running
+
 To build the C portion of the project, navigate to the `part1` directory and run:
 ```
 make
 ```
+
 This will produce an executable named `vault`. Running the program requires a student identifier as input, either as a command-line argument or interactively when prompted. The program sets up the vault, generates metadata nodes based on the seed, and calls the yet-to-be-implemented `recover_password` function. Once implemented by the student, this function should populate a character buffer with the recovered password.
+
 To work on Part 2, students should read `part2/README_part2.md`, complete `program_template.y86`, and use the provided `y86_sim.py` to execute their assembly program. The simulator prints a summary of the computed code, the target code, and whether the vault opens.
+
 For instructors, the script `instructor/generate_answer.py` may be used to generate the expected password and unlocking behaviour for any valid student identifier. See `instructor/README_instructor.md` for usage details.
-Academic Tone and Expectations
-The code and accompanying documents employ an academic tone. Comments are succinct and explanatory rather than conversational. When writing your own code or documentation, strive for clarity, proper indentation, and adherence to standard C and Python conventions. Do not use artificial intelligence terminology - focus instead on the underlying computer architecture concepts being exercised.
+
