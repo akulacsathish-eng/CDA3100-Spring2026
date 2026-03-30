@@ -3,10 +3,7 @@
 #include <ctype.h>
 
 /*
- * Extracts the numeric component of the student identifier and uses
- * it to compute a seed.  Non‑digit characters are ignored.  The
- * multiplicative and additive constants are chosen to match a common
- * linear congruential generator; the modulus is 2^31 (0x80000000).
+ * Extracts the numeric component of the student identifier and use
  */
 unsigned int compute_seed(const char *student_id) {
     unsigned long id_num = 0;
