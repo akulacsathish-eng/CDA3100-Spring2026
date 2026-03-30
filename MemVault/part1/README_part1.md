@@ -44,5 +44,5 @@ The header `vault\_gen.h` declares the `Node` structure and functions used to bu
 
 * Do not alter the provided `Node` structure or the functions in `vault\_gen.c` and `seed\_util.c`. All personalisation is derived from the seed, and modifying these files may break reproducibility.
 * The program uses dynamic memory allocation for the node array and password buffer; be sure to free any allocated memory to avoid leaks.
-* Use an academic tone in your code comments: concisely explain why each step is necessary without referring to conversational or artificial-intelligence phrasing.
+
 
