@@ -5,7 +5,7 @@ The assignment is divided into two interconnected parts:
 
 1. **Part 1 — Memory Vault (C + Memory Layout).**  Students analyse the layout of a custom metadata structure and apply pointer arithmetic to traverse a two‑dimensional “vault” of characters.  They must recover a hidden password by following metadata records and computing displacement offsets rather than using fixed field names.
 
-2. **Part 2 — Vault Control Program (Y86 Assembly).**  Students write a non‑trivial program in Y86 assembly (a pedagogical subset of the x86‑64 instruction set).  The program iterates over an array of integers, computes a code based on even and odd index positions, compares it against a target value, and branches to an open or locked state.
+2. **Part 2 — Vault Control Program (Y86 Assembly).**  TBD
 
 The system is **deterministic**.  Personalisation is achieved via a seed computed from each student’s numeric identifier.  No per‑student source files exist; all variation occurs at runtime through the seed.
 
@@ -23,12 +23,8 @@ memory_vault_system/
 │   ├── seed_util.c
 │   ├── seed_util.h
 │   └── (student implements recover_password in main.c)
-├── part2/                 # Source files for Part 2
-│   ├── README_part2.md
-│   ├── y86_sim.py         # Y86 interpreter
-│   └── program_template.y86
-├── instructor/            # Scripts for instructors
-│   ├── README_instructor.md
+
+├── instructor/ 
 │   └── generate_answer.py # Generates expected answers for each student
 └── pdf/                   # Instructional handouts and timeline 
     ├── Project_Timeline.pdf
