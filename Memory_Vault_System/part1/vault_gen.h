@@ -5,9 +5,7 @@
 
 /*
  * Part 1 defines a metadata structure used to describe how to extract
- * characters from a two–dimensional vault.  Pay close attention to the
- * ordering and sizing of the fields—padding bytes will be inserted by
- * the compiler to satisfy alignment requirements.
+ * characters from a two–dimensional vault. 
  */
 typedef struct {
     char valid;           /* non‑zero when this node is considered */
@@ -25,17 +23,13 @@ typedef struct {
 
 /*
  * Fills the vault with deterministic uppercase letters based on the
- * provided pseudo‑random state.  The state is updated via the linear
- * congruential generator defined in seed_util.c.  The vault must be
- * allocated as a [ROWS][COLS] array by the caller.
+ * provided pseudo‑random state.  
  */
 void generate_vault(char vault[ROWS][COLS], unsigned int *state);
 
 /*
  * Allocates and fills an array of Node structures.  The length of the
- * array is stored in *out_len.  Each node contains metadata used to
- * recover a single character from the vault.  The caller is responsible
- * for freeing the returned array using free().
+ * array is stored in *out_len.  
  */
 Node *generate_nodes(int *out_len, unsigned int *state);
 
